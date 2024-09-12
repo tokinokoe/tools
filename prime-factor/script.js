@@ -16,9 +16,9 @@ function primefact(n) {
 }
 
 function writeresult() {
-  const n = BigInt(document.getElementById("num").value);
+  const n = Number(document.getElementById("num").value);
   if (n > 1 && n === Math.floor(n)) {
-    const result = primefact(n).join("×");
+    const result = primefact(BigInt(n)).join("×");
     document.getElementById("result").innerHTML = result;
   } else {
     document.getElementById("result").innerHTML =
