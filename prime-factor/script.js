@@ -16,9 +16,14 @@ function primefact(n) {
 }
 
 function writeresult() {
-  const n = BigInt(document.getElementById("num").value),
-    result = primefact(n).join("×");
-  document.getElementById("result").innerHTML = result;
+  const n = BigInt(document.getElementById("num").value);
+  if (n > 1 && n === Math.floor(n)) {
+    const result = primefact(n).join("×");
+    document.getElementById("result").innerHTML = result;
+  } else {
+    document.getElementById("result").innerHTML =
+      "2以上の自然数を入力してください";
+  }
 }
 
 document.getElementById("submit").addEventListener("click", writeresult);
