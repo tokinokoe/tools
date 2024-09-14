@@ -2,6 +2,7 @@
   <head>
     <title>行列の積 | 鯨波の作業場</title>
     <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css">
     <script src="./script.js" async></script>
   </head>
   <body>
@@ -23,10 +24,59 @@
             理論上何桁でも計算できるはずですが、メモリの容量により計算ができない、時間がかかる、もしくはフリーズする可能性があります。<br />
             大きい桁数の計算は自己責任でご使用ください。
           </p>
-          <p>
-            P:<input type="number" id="P_row">×<input type="number" id="P_col">行列 <button id="set_P">設定</button><br>
-            <table id="P"></table>
-          </p>
+          <div>
+            <p>
+              P:<input type="number" id="P_row" value="3" />×<input
+                type="number"
+                id="P_col"
+                value="3"
+              />行列 <button id="set_P">設定</button>
+            </p>
+            <table id="P" class="matrix">
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <p>
+              Q:<input type="number" id="Q_row" value="3" />×<input
+                type="number"
+                id="Q_col"
+                value="3"
+              />行列 <button id="set_Q">設定</button>
+            </p>
+            <table id="Q" class="matrix">
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <p><button id="calculate">計算</button></p>
           <p>結果:<span id="result"></span></p>
         </div>
       </div>
